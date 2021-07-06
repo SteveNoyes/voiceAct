@@ -7,18 +7,19 @@ Structure Style:
   Utility Styles
   Page Layout Styles
   Specific Styles
-
   Or:
-
   Follows Page Structure e.g.:
     Universal
     Header
     Main body
     Footer
-
 Author URI: https://stevenmnoyes.com/
 Tags:Voice Actor, George Noyes, Website
 */
+
+h1 {
+  margin: 0;
+}
 
 /* Colors */
 
@@ -35,13 +36,13 @@ Tags:Voice Actor, George Noyes, Website
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: var(--darkGreen);
 }
 
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: var(--white);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -49,13 +50,13 @@ Tags:Voice Actor, George Noyes, Website
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: var(--white);
+  color: var(--darkGreen);
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
-  color: white;
+  background-color: var(--blue);
+  color: var(--white);
 }
 
 .topnav .icon {
@@ -89,37 +90,9 @@ Tags:Voice Actor, George Noyes, Website
 /* HERO SECTION */
 
 .hero-image {
+  height: 100vh;
+  width: 100%;
   background-image: url("heroImg.jpg");
-  /* height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative; */
-}
-
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-
-.hero-text button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 10px 25px;
-  color: black;
-  background-color: #ddd;
-  text-align: center;
-  cursor: pointer;
-}
-
-.hero-text button:hover {
-  background-color: #555;
-  color: white;
 }
 
 /* HERO SECTION ENDS */
