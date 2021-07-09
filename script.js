@@ -1,12 +1,5 @@
-function menuIcon() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-
-function activeMenu() {
-  var y = document.getElementsByClassName("active");
-}
+const navbar = document.querySelector(".navbar");
+const menuToggle = document.querySelector(".menu-toggle");
+menuToggle.addEventListener("click", () => {
+  navbar.classList.toggle("open");
+});
