@@ -84,18 +84,29 @@ table {
   --brown: #BC6C25;
 }
 
-/* NAVBAR */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 4rem;
+/* FONT SIZE */
+
+h1 {
+	font-size: 2.5em;
 }
 
-.navbar-brand {
-  color: lightgrey;
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
+p {
+	font-size: 1.7em;
+}
+
+/* NAVBAR */
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 4rem;
+	background-color: var(--white);
 }
 
 .nav-list {
@@ -106,12 +117,22 @@ table {
   width: 50%;
   height: 100vh;
   background-color: #222222;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   z-index: 1250;
-  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .nav-list a {
@@ -129,18 +150,29 @@ table {
 }
 
 .open .nav-list {
-  transform: translateX(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .menu-toggle {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 3.2rem;
   height: 3.2rem;
   cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
@@ -150,6 +182,7 @@ table {
   background-color: black;
   border-radius: 2px;
   border: none;
+  -webkit-transition: all 0.7s ease-out;
   transition: all 0.7s ease-out;
 }
 
@@ -165,11 +198,13 @@ table {
 }
 
 .hamburger::before {
-  transform: translateY(-8px);
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
 }
 
 .hamburger::after {
-  transform: translateY(8px);
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
 }
 
 .open .hamburger {
@@ -177,13 +212,17 @@ table {
 }
 
 .open .hamburger::before {
-  transform-origin: (0, 0);
-  transform: rotate(45deg);
+  -webkit-transform-origin: (0, 0);
+          transform-origin: (0, 0);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .open .hamburger::after {
-  transform-origin: (0, 0);
-  transform: rotate(-45deg);
+  -webkit-transform-origin: (0, 0);
+          transform-origin: (0, 0);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 @media screen and (min-width: 768px) {
@@ -193,14 +232,22 @@ table {
     height: initial;
     background-color: transparent;
     padding: 0;
-    justify-content: initial;
-    flex-direction: row;
-    transform: initial;
+    -webkit-box-pack: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-transform: initial;
+            transform: initial;
+    -webkit-transition: initial;
     transition: initial;
   }
   .nav-link {
     margin-left: 4rem;
     font-size: 1.6rem;
+    -webkit-transition: all 0.1s;
     transition: all 0.1s;
   }
   .nav-list a {
@@ -224,19 +271,18 @@ table {
 }
 
 .hero-image h1 {
-  font-size: 2em;
   padding: 2em 0em 1em 2em;
 }
 
 .hero-image .phoneNumber {
-  padding: 0em 0em 1em 4em;
+  padding: 0em 0em 1em 3em;
 }
 
 .hero-image .emailAddy {
-  padding: 0em 0em 1em 4em;
+  padding: 0em 0em 1em 3em;
 }
 
-.hero-image button {
+ button {
   margin: 8em 0em 0em 4em;
   padding: .8em;
   border-radius: 7px;
@@ -257,14 +303,13 @@ table {
 /* demo section */
 
 .demoWrap {
-  height: 130vh;
+  height: 120vh;
   margin-top: 15px;
   background-color: var(--blue);
   border-top: 2px solid black;
 }
 
 .demoWrap h1 {
-  font-size: 2.3em;
   text-align: center;
   padding: 2em 0 .6em;
   color: var(--white);
@@ -272,26 +317,33 @@ table {
 }
 
 .demoWrap p {
-  width: 70%;
+  width: 80%;
   margin: auto;
   text-align: center;
   line-height: 1.5em;
-  padding-bottom: 2em;
 }
 
 .demos {
   text-align: center;
 }
 
-.commercial button, .narration button, .moreDemos button {
-  margin: 1em 0em;
+.demosCards {
+  margin: 1em auto;
   width: 180px;
   height: 180px;
   border-radius: 6px;
-  font-size: 1.3em;
-  font-weight: bold;
-  color: var(--blue);
   background-color: lightgrey;
+	position: relative;
+}
+
+.demosCards p {
+	width: 100%;
+	margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	color: black;
 }
 
 /* demo section end*/
@@ -301,6 +353,15 @@ table {
 
 .about {
   height: 100vh;
+	background-color: rgba(114, 97, 90, 0.5);
+}
+
+.voiceDsrpt h1 {
+	border: 2px solid black;
+}
+
+.voiceDsrpt p {
+	border: 2px solid black;
 }
 
 
