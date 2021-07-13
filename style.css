@@ -22,7 +22,7 @@ Tags:Voice Actor, George Noyes, Website
    License: none (public domain)
 */
 
-/* css reset */
+/* CSS RESET */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -68,14 +68,14 @@ table {
 	border-spacing: 0;
 }
 
-/* css reset end */
+/* CSS RESET END */
 
-/* Colors */
+/* COLORS */
 
 :root {
-  /* primary */
+  /* PRIMARY */
 
-  /* secondary */
+  /* SECONDARY */
   --darkGreen: #283618;
   --green: #606C38;
   --blue: #57717D;
@@ -87,11 +87,16 @@ table {
 /* FONT SIZE */
 
 h1 {
-	font-size: 2.5em;
+	font-size: 3em;
 }
 
 p {
-	font-size: 1.7em;
+	font-size: 2em;
+}
+
+li {
+	font-size: 1.7em; 
+	line-height:  1em;
 }
 
 /* NAVBAR */
@@ -271,7 +276,7 @@ p {
 }
 
 .hero-image h1 {
-  padding: 2em 0em 1em 2em;
+  padding: 2em 0em 1em 1.67em;
 }
 
 .hero-image .phoneNumber {
@@ -282,11 +287,14 @@ p {
   padding: 0em 0em 1em 3em;
 }
 
- button {
+ .hero-image a {
+	display: inline-block;
   margin: 8em 0em 0em 4em;
-  padding: .8em;
+  padding: 1em;
   border-radius: 7px;
   background-color: var(--white);
+	text-decoration: none;
+	color: black;
 }
 /* HERO SECTION ENDS */
 
@@ -318,7 +326,7 @@ p {
 
 .demoWrap p {
   width: 80%;
-  margin: auto;
+  margin: 1.5em auto 2em ;
   text-align: center;
   line-height: 1.5em;
 }
@@ -356,13 +364,23 @@ p {
 	background-color: rgba(114, 97, 90, 0.5);
 }
 
+.voiceOffers {
+	text-align: center;
+}
+
+.voiceOffers h1 {
+	padding: 2em 0 .6em;
+}
+
 .voiceDsrpt h1 {
-	border: 2px solid black;
+	text-align: center;
+	padding: 2em 0 0;
 }
 
 .voiceDsrpt p {
-	border: 2px solid black;
+	width: 75%;
+	margin: 1em auto;
+	text-align: center;
+	line-height: 1.5em;
 }
-
-
 /* ABOUT SECTION END */
